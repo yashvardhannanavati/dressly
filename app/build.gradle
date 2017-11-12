@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        defaultConfig {
+            keyAlias 'dresslyKey'
+            keyPassword 'Dr3$sLy_@pP'
+            storeFile file('../release-store/dresslyKeyStore.jks')
+            storePassword 'Dr3$sLy_@pP'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        compileSdkVersion 26
+        buildToolsVersion "26.0.2"
+        applicationId "com.agrawroh.ninja.dressly"
+        minSdkVersion 22
+        targetSdkVersion 26
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.defaultConfig
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.defaultConfig
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.defaultConfig
+        }
+    }
+    productFlavors {
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        google()
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.facebook.fresco:fresco:1.5.0'
+    compile 'com.android.support:animated-vector-drawable:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.google.firebase:firebase-auth:11.6.0'
+    compile 'com.google.android.gms:play-services-auth:11.6.0'
+    compile 'com.firebaseui:firebase-ui-auth:2.3.0'
+    compile 'com.google.firebase:firebase-database:11.6.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.28.0'
+    compile 'com.android.support:customtabs:26.1.0'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-support-v4:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-design:0.4.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.0.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.squareup.okio:okio:1.13.0'
+    compile 'com.github.stfalcon:chatkit:0.2.2'
+    compile('com.twitter.sdk.android:twitter-core:2.3.0@aar') {
+        transitive = true
+    }
+    compile('com.twitter.sdk.android:twitter:3.1.1@aar') {
+        transitive = true
+    }
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile files('libs/systembartint-1.0.4.jar')
+    compile 'commons-net:commons-net:3.6'
+    compile 'com.google.android.gms:play-services-wallet:11.6.0'
+    compile 'com.google.android.gms:play-services:11.6.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.weiwangcn.betterspinner:library-material:1.1.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

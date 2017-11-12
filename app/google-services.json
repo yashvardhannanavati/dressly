@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "38504629426",
+    "firebase_url": "https://drey-bfa5c.firebaseio.com",
+    "project_id": "drey-bfa5c",
+    "storage_bucket": "drey-bfa5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38504629426:android:dd55f06f0e7343d1",
+        "android_client_info": {
+          "package_name": "com.agrawroh.ninja.dressly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "38504629426-kqqc06b512vk0rm77qltchlne4pd6vfu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.agrawroh.ninja.dressly",
+            "certificate_hash": "40aa37fa3000c684f5313531fc24b76bf6affd9d"
+          }
+        },
+        {
+          "client_id": "38504629426-foolavk36aq3abevh11nnp5i5f45sbr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTuSIPKNobFnyoVDc2OK4zilPAqo4TBhY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "38504629426-foolavk36aq3abevh11nnp5i5f45sbr2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
